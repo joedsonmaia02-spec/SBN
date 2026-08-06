@@ -1,14 +1,14 @@
 # SBN
 aaaaaaaaa
 
-## [Descrição]; 
+### [Descrição]; 
 
 
-## O que o projeto busca resolver?
+### O que o projeto busca resolver?
 
-## instruções de execução;
+### Instruções de execução;
 
-## exemplos de uso, quando possível;
+### Exemplos de uso, quando possível;
 
 
-## divisão de tarefas entre os integrantes da equipe
+### Divisão de tarefas entre os integrantes da equipe
