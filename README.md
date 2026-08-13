@@ -1,5 +1,5 @@
 # SBN
-##(Symbol-Based Notation)
+## (Symbol-Based Notation)
 
 ## Descrição
 O SBN (Symbol-Based Notation) é um sistema educacional de codificação e decodificação de mensagens desenvolvido para demonstrar o funcionamento de criptografias clássicas e, acima de tudo, expor suas fragilidades estruturais frente a ataques de segurança modernos.
