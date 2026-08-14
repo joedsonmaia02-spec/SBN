@@ -18,28 +18,22 @@ def codificaVigenere():
             continue
             
         codigo = ""
-        indice_chave = 0 # Controla qual letra da chave estamos usando
+        indice_chave = 0
 
         for letra in texto:
-            # Se a letra existe no nosso alfabeto (A-Z)
+    
             if letra in alfabeto_pos:
-                # Pega a letra atual da chave e sua posição numérica
                 letra_chave = chave[indice_chave % len(chave)]
                 pos_chave = alfabeto_pos[letra_chave]
                 
-                # Pega a posição da letra do texto original
                 pos_letra = alfabeto_pos[letra]
                 
-                # Aplica a fórmula de Vigenère: (Texto + Chave) % 26
                 nova_pos = (pos_letra + pos_chave) % 26
                 
-                # Adiciona a nova letra ao resultado
                 codigo += lista_letras[nova_pos]
-                
-                # Avança para a próxima letra da chave
+
                 indice_chave += 1
             else:
-                # Mantém espaços, números ou pontuações intactos sem avançar a chave
                 codigo += letra
             
         print(f"Texto Cifrado: {codigo}\n")
