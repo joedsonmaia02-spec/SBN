@@ -8,8 +8,8 @@ lista_letras = list(alfabeto_pos.keys())
 
 def codificaVigenere():
     while True:
-        texto = input('Digite o texto (ou "sair" para encerrar): ').upper()
-        if texto == "SAIR":
+        texto = input('Digite o texto (ou "/sair" para encerrar): ').upper()
+        if texto =="/SAIR":
             print("Encerrando...")
             break            
             
