@@ -18,4 +18,3 @@ def codificaAtbash():
             codigo = codigo + atbash.get(letra, letra)
             
         print(codigo)
-codificaAtbash()
