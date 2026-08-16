@@ -1,5 +1,8 @@
 from codificacao_morse import codifica_morse
-
+from codificacao_morse import decodifica_morse
+from  codificacao_vigenere import codificaVigenere
+from codificacao_ascii import codificar_ascii
+from codificacao_ascii import decodificar_ascii
 
 while 1:
     entrada = str(input("======= Programa de Cifragem e Decifragem ======= \n  1. Cifrar \n 2. Decifrar \n  3. Sair \n"))
@@ -11,7 +14,7 @@ while 1:
 
 
         elif tipocifra == "B":
-            cesarmsg = str(input("Informe a mensagem que deseja cifrar:"))
+            codificaVigenere()
 
 
         elif tipocifra == "C":
@@ -21,7 +24,7 @@ while 1:
             codifica_morse()
 
         elif tipocifra == "E":
-            cesarmsg = str(input("Informe a mensagem que deseja cifrar:"))
+            texto_de_entrada = str(input("Informe a mensagem que deseja cifrar:"))
 
         else:
             print("Esta não é uma entrada válida.")
@@ -41,10 +44,10 @@ while 1:
             cesarmsg = str(input("Informe a mensagem que deseja decifrar:"))
 
         elif tipocifra == "D":
-            cesarmsg = str(input("Informe a mensagem que deseja decifrar:"))
+            decodifica_morse()
 
         elif tipocifra == "E":
-            cesarmsg = str(input("Informe a mensagem que deseja decifrar:"))
+            texto_em_ascii = str(input("Informe a mensagem que deseja decifrar:"))
 
         else:
             print("Selecione um tipo de cifra válido ")
