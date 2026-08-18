@@ -37,5 +37,3 @@ def codificaVigenere():
             else:
                 codigo += letra
         return codigo
-
-print(codificaVigenere())
