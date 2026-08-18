@@ -8,9 +8,9 @@ atbash = {'A':'Z','B':'Y','C':'X','D':'W','E':'V','F': 'U',
           ' ': ' '}
 def codificaAtbash():
     while True:
-        texto = input('Digite uma palavra (ou "sair" para encerrar): ').upper()
+        texto = input('Digite uma palavra (ou "/sair" para encerrar): ').upper()
 
-        if texto == "SAIR": 
+        if texto == "/SAIR": 
             break            
         codigo = ""
 

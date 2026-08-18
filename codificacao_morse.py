@@ -1,20 +1,66 @@
-morse = {'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '..-.',
-         'G': '--.', 'H': '....', 'I': '..', 'J': '.---', 'K': '-.-', 'L': '.-..',
-         'M': '--', 'N': '-.', 'O': '---', 'P': '.--.', 'Q': '--.-', 'R': '.-.',
-         'S': '...', 'T': '-', 'U': '..-', 'V': '...-', 'W': '.--', 'X': '-..-',
-         'Y': '-.--', 'Z': '--..', '0': '-----', '1': '.----', '2': '..---',
-         '3': '...--', '4': '....-', '5': '.....', '6': '-....', '7': '--...',
-         '8': '---..', '9': '----.'}
+morse = {'A': '.-',    'B': '-...',  'C': '-.-.',  'D': '-..',   'E': '.',
+    'F': '..-.',  'G': '--.',   'H': '....',  'I': '..',    'J': '.---',
+    'K': '-.-',   'L': '.-..',  'M': '--',    'N': '-.',    'O': '---',
+    'P': '.--.',  'Q': '--.-',  'R': '.-.',   'S': '...',   'T': '-',
+    'U': '..-',   'V': '...-',  'W': '.--',   'X': '-..-',  'Y': '-.--',
+    'Z': '--..','0': '-----', '1': '.----', '2': '..---', '3': '...--', '4': '....-',
+    '5': '.....', '6': '-....', '7': '--...', '8': '---..', '9': '----.',
+    '.': '.-.-.-',   ',': '--..--',   '?': '..--..',   "'": '.----.',
+    '!': '-.-.--',   '/': '-..-.',    '(': '-.--.',    ')': '-.--.-',
+    '&': '.-...',    ':': '---...',   ';': '-.-.-.',   '=': '-...-',
+    '+': '.-.-.',    '-': '-....-',   '_': '..--.-',   '"': '.-..-.',
+    '$': '...-..-',  '@': '.--.-.','Ã': '.--.-',    'Á': '.--.-',    'À': '.--.-',    'Â': '.--.-',
+    'É': '..-..',    'Ê': '..-..',    'Í': '..',       'Ó': '---.',
+    'Õ': '---.',     'Ú': '..--',     'Ç': '-.-..',}
 
-def codifica_morse(): # Codificação de Texto para Morse
+def codifica_morse():  # Codificação de Texto para Morse
     while True:
         texto = input('Digite uma palavra (ou "sair" para encerrar): ').upper()
 
         if texto == "SAIR":
-         break
+            print("Encerrando...")
+            break
 
         codigo = ""
         for letra in texto:
-            codigo = codigo + morse.get(letra, "") + " "
+            if letra == " ":
+                codigo += "/ " 
+                continue
+
+            try:
+                codigo += morse[letra] + " "
+            except KeyError:
+                print(f'Aviso: "{letra}" não é uma letra ou número válido e foi ignorado.')
 
         print(codigo)
+
+morse_invertido = {valor: chave for chave, valor in morse.items()}
+
+
+def decodifica_morse():
+    while True:
+        codigo = input('Digite o código morse (use "/" entre palavras, ou "sair" para encerrar): ')
+
+        if codigo.strip().upper() == "SAIR":
+            print("Encerrando...")
+            break
+
+        palavras = codigo.strip().split("/")
+        texto_final = []
+
+        for palavra in palavras:
+            simbolos = palavra.split()
+            texto = ""
+            for simbolo in simbolos:
+                try:
+                    texto += morse_invertido[simbolo]
+                except KeyError:
+                    print(f'Aviso: "{simbolo}" não é um código morse válido e foi ignorado.')
+
+            texto_final.append(texto)
+
+        print(" ".join(texto_final))
+        
+a=1
+if a==1:
+    decodifica_morse()
