@@ -12,5 +12,3 @@ def decodificar_ascii(texto_em_ascii):
     for letra in texto_em_ascii.split():
         texto_de_saida+=chr(int(letra))
     return texto_de_saida
-
-
