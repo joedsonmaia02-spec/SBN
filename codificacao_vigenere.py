@@ -8,7 +8,7 @@ lista_letras = list(alfabeto_pos.keys())
 
 def codificaVigenere():
     while True:
-        texto = input('Digite o texto (ou "/sair" para encerrar): ').upper()
+        texto = input('Digite o texto (ou "/SAIR" para encerrar): ').upper()
         if texto =="/SAIR":
             print("Encerrando...")
             break            
@@ -36,7 +36,6 @@ def codificaVigenere():
                 indice_chave += 1
             else:
                 codigo += letra
-        print(f"Texto Cifrado: {codigo}\n")
+        return codigo
 
-if __name__ == "__main__":
-    codificaVigenere()
+print(codificaVigenere())
