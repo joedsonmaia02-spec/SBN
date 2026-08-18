@@ -15,9 +15,9 @@ morse = {'A': '.-',    'B': '-...',  'C': '-.-.',  'D': '-..',   'E': '.',
 
 def codifica_morse():  # Codificação de Texto para Morse
     while True:
-        texto = input('Digite uma palavra (ou "sair" para encerrar): ').upper()
+        texto = input('Digite uma palavra (ou "/SAIR" para encerrar): ').upper()
 
-        if texto == "SAIR":
+        if texto == "/SAIR":
             print("Encerrando...")
             break
 
@@ -39,9 +39,9 @@ morse_invertido = {valor: chave for chave, valor in morse.items()}
 
 def decodifica_morse():
     while True:
-        codigo = input('Digite o código morse (use "/" entre palavras, ou "sair" para encerrar): ')
+        codigo = input('Digite o código morse (use "/" entre palavras, ou "/SAIR" para encerrar): ')
 
-        if codigo.strip().upper() == "SAIR":
+        if codigo.strip().upper() == "/SAIR":
             print("Encerrando...")
             break
 
@@ -61,6 +61,3 @@ def decodifica_morse():
 
         print(" ".join(texto_final))
         
-a=1
-if a==1:
-    decodifica_morse()

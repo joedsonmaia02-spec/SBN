@@ -17,4 +17,4 @@ def codificaAtbash():
         for letra in texto:
             codigo = codigo + atbash.get(letra, letra)
             
-        print(codigo)
+        return codigo

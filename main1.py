@@ -1,6 +1,8 @@
 from codificacao_cesar import codificar_cesar
 from codificacao_vigenere import codificaVigenere
-
+from codificacao_atbash import codificaAtbash
+from codificacao_morse import codifica_morse
+from codificacao_ascii import codificar_ascii, decodificar_ascii
 print("======= Programa de Cifragem e Decifragem =======")
 
 entrada = str(input("1. Cifrar \n2. Decifrar\nOpção:"))
@@ -16,11 +18,14 @@ if entrada == "1":
         msg_codificada = codificaVigenere()
         print(msg_codificada)
     elif tipocifra == "C":
-        cesarmsg = str(input("Informe a mensagem que deseja cifrar:"))
+        msg_codificada = codificaAtbash()
+        print(msg_codificada)
     elif tipocifra == "D":
-        cesarmsg = str(input("Informe a mensagem que deseja cifrar:"))
+        codifica_morse()
     elif tipocifra == "E":
-        cesarmsg = str(input("Informe a mensagem que deseja cifrar:"))
+        ascii_msg = input("Informe a mensagem que deseja cifrar:")
+        msg_codificada = codificar_ascii(ascii_msg)
+        print(msg_codificada)
     else:
         print("Esta não é uma entrada válida.")
 
