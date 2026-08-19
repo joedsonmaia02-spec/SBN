@@ -1,5 +1,4 @@
 from dict import import_dicionario
-from file_and_list_functions import open_file_read, receber_path, criar_lista_entrada
 
 
 def quebrar_cifra(text):

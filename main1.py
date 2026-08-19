@@ -3,10 +3,12 @@ from codificacao_vigenere import codificaVigenere
 from codificacao_atbash import codificaAtbash, decodifica_Atbash
 from codificacao_morse import codifica_morse,decodifica_morse
 from codificacao_ascii import codificar_ascii, decodificar_ascii
-from file_and_list_functions import salva_em_arquivo
+from file_and_list_functions import salva_em_arquivo,criar_lista_entrada,open_file_read,receber_path
+from break_cipher import quebrar_cifra
+
 print("======= Programa de Cifragem e Decifragem =======")
 
-entrada = str(input("1. Cifrar \n2. Decifrar\nOpção:"))
+entrada = str(input("1. Cifrar \n2. Decifrar\n3. Quebrar cifra Cesar\nOpção:"))
 
 if entrada == "1":
     tipocifra = input("Escolha o tipo de cifra: \n A: Cifra de César \n B: Cifra de Vigenère \n C: Cifra de Atbash \n D: Morse \n E: Ascii \nOpção:")
@@ -61,6 +63,13 @@ elif entrada == "2":
     write_on_file_condition=input("Deseja gravar o texto decodificado em um arquivo de texto?(S/N): ")
     if write_on_file_condition=="S":
         salva_em_arquivo(msg_decodificada)
-
+elif entrada == "3":
+    break_condition=input("Deseja quebrar a cifra de cesar de um Arquivo ou Texto?(A/T): ")
+    if break_condition=="A":
+        chave=quebrar_cifra(open_file_read(receber_path()))
+        print("A chave é:",chave)
+    if break_condition=="T":
+        chave=quebrar_cifra(criar_lista_entrada(input("Insira a frase: ")))
+        print("A chave é:",chave)
 else:
     print("Esta não é uma entrada válida.")
