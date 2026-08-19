@@ -1,6 +1,6 @@
 from codificacao_cesar import codificar_cesar, decodificar_cesar
-from codificacao_vigenere import codificaVigenere
-from codificacao_atbash import codificaAtbash, decodifica_Atbash
+from codificacao_vigenere import codificar_vigenere, decodificar_vigenere
+from codificacao_atbash import codificar_atbash, decodifica_Atbash
 from codificacao_morse import codifica_morse, decodifica_morse
 from codificacao_ascii import codificar_ascii, decodificar_ascii
 print("======= Programa de Cifragem e Decifragem =======")
@@ -15,10 +15,10 @@ if entrada == "1":
         resultado=codificar_cesar(texto, deslocamento)
         print(resultado)
     elif tipocifra == "B":
-        msg_codificada = codificaVigenere()
+        msg_codificada = codificar_vigenere()
         print(msg_codificada)
     elif tipocifra == "C":
-        msg_codificada = codificaAtbash()
+        msg_codificada = codificar_atbash()
         print(msg_codificada)
     elif tipocifra == "D":
         codifica_morse()
