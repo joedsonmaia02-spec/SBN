@@ -32,7 +32,7 @@ def codifica_morse():  # Codificação de Texto para Morse
             except KeyError:
                 print(f'Aviso: "{letra}" não é uma letra ou número válido e foi ignorado.')
 
-        print(codigo)
+        return(codigo)
 
 morse_invertido = {valor: chave for chave, valor in morse.items()}
 
@@ -59,5 +59,5 @@ def decodifica_morse():
 
             texto_final.append(texto)
 
-        print(" ".join(texto_final))
+        return(" ".join(texto_final))
         
