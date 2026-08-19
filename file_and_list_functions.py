@@ -21,3 +21,11 @@ def criar_lista_entrada(text):
     for word in text.split():
         lista_palavras.append(word)
     return lista_palavras
+
+def salva_em_arquivo(text):
+        try:
+            nome_arquivo=input("Insira o nome do arquivo: ")
+            with open(nome_arquivo, "w") as arquivo:
+                arquivo.write(text)
+        except:
+            pass
