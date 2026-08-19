@@ -46,7 +46,9 @@ elif entrada == "2":
         msg_decodificada = decodificar_cesar(cesarmsg, key)
         print(msg_decodificada)
     elif tipocifra == "B":
-        msg_decodificada = str(input("Informe a mensagem que deseja decifrar:"))
+        textocodificado = input('Digite o texto codificado (ou "SAIR" para encerrar): ')
+        key = input('Digite a palavra-chave: ')
+        msg_decodificada = decodificar_vigenere(textocodificado, key)
     elif tipocifra == "C":
         msg_decodificada = decodifica_Atbash()
         print(msg_decodificada)
