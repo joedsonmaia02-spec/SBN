@@ -13,7 +13,7 @@ def open_file_read(path):
 
 
 def receber_path():
-        path=input("Insira o camhinho do arquivo: ")
+        path=input("Insira o caminho do arquivo: ")
         return path
 
 def criar_lista_entrada(text):
