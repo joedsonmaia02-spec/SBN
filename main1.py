@@ -1,7 +1,7 @@
-from codificacao_cesar import codificar_cesar,decodificar_cesar
-from codificacao_vigenere import codificaVigenere 
-from codificacao_atbash import codificaAtbash, decodifica_Atbash
-from codificacao_morse import codifica_morse,decodifica_morse
+from codificacao_cesar import codificar_cesar, decodificar_cesar
+from codificacao_vigenere import codificar_vigenere, decodificar_vigenere
+from codificacao_atbash import codificar_atbash, decodifica_Atbash
+from codificacao_morse import codificar_morse, decodificar_morse
 from codificacao_ascii import codificar_ascii, decodificar_ascii
 from file_and_list_functions import salva_em_arquivo,criar_lista_entrada,open_file_read,receber_path
 from break_cipher import quebrar_cifra
@@ -18,10 +18,10 @@ if entrada == "1":
         msg_codificada = codificar_cesar(cesarmsg, key)
         print(msg_codificada)
     elif tipocifra == "B":
-        msg_codificada = codificaVigenere()
+        msg_codificada = codificar_vigenere()
         print(msg_codificada)
     elif tipocifra == "C":
-        msg_codificada = codificaAtbash()
+        msg_codificada = codificar_atbash()
         print(msg_codificada)
     elif tipocifra == "D":
         msg_codificada=codifica_morse()

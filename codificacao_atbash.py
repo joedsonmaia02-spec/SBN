@@ -13,7 +13,7 @@ atbash = {'A':'Z','B':'Y','C':'X','D':'W','E':'V','F': 'U',
           '9': '0', ' ': ' '}
 pontuacoes = "!?.,;:'\"()-"
 
-def codificaAtbash():
+def codificar_atbash():
     while True:
         texto = input('Digite uma palavra para a codificação em Atbash (ou "sair" para encerrar): ')
 

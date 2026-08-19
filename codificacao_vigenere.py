@@ -6,7 +6,7 @@ alfabeto_pos = {
 
 lista_letras = list(alfabeto_pos.keys())
 
-def codificaVigenere():
+def codificar_vigenere():
     while True:
         texto = input('Digite o texto (ou "/SAIR" para encerrar): ').upper()
         if texto =="/SAIR":
@@ -30,6 +30,38 @@ def codificaVigenere():
                 pos_letra = alfabeto_pos[letra]
                 
                 nova_pos = (pos_letra + pos_chave) % 26
+                
+                codigo += lista_letras[nova_pos]
+
+                indice_chave += 1
+            else:
+                codigo += letra
+        return codigo
+
+def decodificar_vigenere():
+    while True:
+        texto = input('Digite o texto (ou "/SAIR" para encerrar): ').upper()
+        if texto =="/SAIR":
+            print("Encerrando...")
+            break
+            
+        chave = input('Digite a palavra-chave: ').upper()
+        if not chave:
+            print("A chave não pode ser vazia.")
+            continue
+            
+        codigo = ""
+        indice_chave = 0
+
+        for letra in texto:
+    
+            if letra in alfabeto_pos:
+                letra_chave = chave[indice_chave % len(chave)]
+                pos_chave = alfabeto_pos[letra_chave]
+                
+                pos_letra = alfabeto_pos[letra]
+                
+                nova_pos = (pos_letra - pos_chave) % 26
                 
                 codigo += lista_letras[nova_pos]
 
