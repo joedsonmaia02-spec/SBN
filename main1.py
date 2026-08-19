@@ -1,6 +1,6 @@
-from codificacao_cesar import codificar_cesar
-from codificacao_vigenere import codificaVigenere
-from codificacao_atbash import codificaAtbash
+from codificacao_cesar import codificar_cesar,decodificar_cesar
+from codificacao_vigenere import codificaVigenere 
+from codificacao_atbash import codificaAtbash, decodifica_Atbash
 from codificacao_morse import codifica_morse,decodifica_morse
 from codificacao_ascii import codificar_ascii, decodificar_ascii
 from file_and_list_functions import salva_em_arquivo
@@ -39,11 +39,15 @@ elif entrada == "2":
     tipocifra = str(input(
         "Escolha o tipo de cifra: \n A: Cifra de César \n B: Cifra de Vigenère \n C: Cifra de Atbash \n D: Morse \n E: Ascii \n"))
     if tipocifra == "A":
-        msg_decodificada = str(input("Informe a mensagem que deseja decifrar:"))
+        cesarmsg = input("Informe a mensagem que deseja decifrar:")
+        key = int(input("Informe chave que deseja usar(1-26):"))
+        msg_decodificada = decodificar_cesar(cesarmsg, key)
+        print(msg_decodificada)
     elif tipocifra == "B":
         msg_decodificada = str(input("Informe a mensagem que deseja decifrar:"))
     elif tipocifra == "C":
-        msg_decodificada = str(input("Informe a mensagem que deseja decifrar:"))
+        msg_decodificada = decodifica_Atbash()
+        print(msg_decodificada)
     elif tipocifra == "D":
         msg_decodificada=decodifica_morse()
         print(msg_decodificada)

@@ -29,7 +29,7 @@ def codificaAtbash():
             else:
                 print(f'Aviso: "{letra}" não é uma letra válida e foi ignorada.')
 
-        print(codigo)
+        return(codigo)
             
 
 atbash_invertido= {valor: chave for chave, valor in atbash.items()}
@@ -56,5 +56,5 @@ def decodifica_Atbash():
                 
 
 
-        print(" ".join(texto_final))
+        return(" ".join(texto_final))
 
