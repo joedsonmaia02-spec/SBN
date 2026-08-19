@@ -24,7 +24,7 @@ if entrada == "1":
         msg_codificada = codificar_atbash()
         print(msg_codificada)
     elif tipocifra == "D":
-        msg_codificada=codifica_morse()
+        msg_codificada=codificar_morse()
         print(msg_codificada)
     elif tipocifra == "E":
         ascii_msg = input("Informe a mensagem que deseja cifrar:")
@@ -51,7 +51,7 @@ elif entrada == "2":
         msg_decodificada = decodifica_Atbash()
         print(msg_decodificada)
     elif tipocifra == "D":
-        msg_decodificada=decodifica_morse()
+        msg_decodificada=decodificar_morse()
         print(msg_decodificada)
     elif tipocifra == "E":
         ascii_msg = input("Informe a mensagem que deseja decifrar:")
