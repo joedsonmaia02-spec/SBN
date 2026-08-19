@@ -15,9 +15,9 @@ morse = {'A': '.-',    'B': '-...',  'C': '-.-.',  'D': '-..',   'E': '.',
 
 def codificar_morse():  # Codificação de Texto para Morse
     while True:
-        texto = input('Digite uma palavra (ou "/SAIR" para encerrar): ').upper()
+        texto = input('Digite uma palavra (ou "SAIR" para encerrar): ').upper()
 
-        if texto == "/SAIR":
+        if texto == "SAIR":
             print("Encerrando...")
             break
 
