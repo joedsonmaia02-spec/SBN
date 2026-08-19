@@ -32,8 +32,8 @@ No caso da quebra da cifra de cesar o usuário ainda é perguntado se deseja dec
 
 ### Divisão de tarefas entre os integrantes da equipe
 
-Raimundo: função de quebra de cifragem por força bruta e suporte para arquivos
-João Gabriel da Silva: função de cifragem com Cifra de César e Slides
-Luan Viktor:  função de cifragem com Cifra de Vigenère
-Joedson: função de codificação e reversão de código morse, decodificação da Cifra de Cesar e Atbash
+- Raimundo: função de quebra de cifragem por força bruta e suporte para arquivos
+- João Gabriel da Silva: função de cifragem com Cifra de César e Slides
+- Luan Viktor:  função de cifragem com Cifra de Vigenère
+- Joedson: função de codificação e reversão de código morse, decodificação da Cifra de Cesar e Atbash
 
