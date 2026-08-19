@@ -11,12 +11,29 @@ Ao demonstrar que um computador consegue quebrar uma mensagem criptografada pela
 
 ### Instruções de execução
 Inicialmente, o sistema oferece ao usuário duas opções principais:
-  1. Cifrar; 2. Decifrar.
-Ao escolher qualquer uma das opções, em seguida, o usuário é direcionado a escolher qual tipo de cifra deseja utilizar:
+  1. Cifrar
+  2. Decifrar
+  3. Quebrar cifra Cesar
+Ao escolher opções um ou dois, o usuário é direcionado a escolher qual tipo de cifra deseja utilizar
+  1. Cifra de César 
+  2. Cifra de Vigenère 
+  3. Cifra de Atbash 
+  4. Morse 
+  5. Ascii
+Ao final da execução o usuário é perguntado se deseja salvar a mensagem cifrada ou decifrada em um arquivo de texto
+No caso da quebra da cifra de cesar o usuário ainda é perguntado se deseja decifrar uma mensagem de texto ou arquivo 
+
+
 
 
 ### Exemplos de uso, quando possível
-
+  Ensinar criptografia clássica
+  Introduzir ideias como chave
 
 ### Divisão de tarefas entre os integrantes da equipe
+
+Raimundo: função de quebra de cifragem por força bruta e suporte para arquivos
+João Gabriel da Silva: função de cifragem com Cifra de César e Slides
+Luan Viktor:  função de cifragem com Cifra de Vigenère
+Joedson: função de codificação e reversão de código morse, decodificação da Cifra de Cesar e Atbash
 
