@@ -1,6 +1,6 @@
 alfabeto = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
 
-def codificar_cesar(texto, deslocamento):
+def codificar_cesar(texto, deslocamento = 1):
     tamanho = len(alfabeto)
     resultado = ""
 
